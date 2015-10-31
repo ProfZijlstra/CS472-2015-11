@@ -19,6 +19,18 @@ and open the template in the editor.
         echo $a->sayHello("Anne");
         echo "<br />";
         echo $b->sayHello("Bob");
+        echo "<br />";
+        echo $a->add(3, 4);
+        echo "<br />";
+        echo $b->add(2.5, 8.1);
+        
+        $a->setX(5);
+        
+        $b->setX(7);
+        echo "<br />";
+        echo $a->getX();
+        echo "<br />";
+        echo $b->getX();
         ?>
     </body>
 </html>
