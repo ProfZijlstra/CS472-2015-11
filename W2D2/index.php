@@ -1,28 +1,10 @@
-<?php
-//if (isset($_GET['error'])) {
-//    $error = $_GET['error'];
-//}
-$error = filter_input(INPUT_GET, 'error');
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Retrieve Grade</title>
-        <meta charset="utf-8" />
-        <style>
-            .error {
-                color: red;
-            }
-        </style>
-            
     </head>
     <body>
         <h1>Retrieve your grade</h1>
-
-        <?php if ($error) : ?>
-            <div class="error"><?= $error ?> </div>
-        <?php endif; ?>
 
         <form action="submitHW.php" method="post">
             <fieldset>
@@ -42,24 +24,24 @@ $error = filter_input(INPUT_GET, 'error');
 
             <fieldset>
                 <legend>About assignment</legend>
-                <p>Assignment
-                    <select name="assignment">
-                        <option>W1D1</option>
-                        <option>W1D2</option>
-                        <option>W1D3</option>
-                        <option>W1D4</option>
-                        <option>W1D5</option>
-                    </select>
-                </p>
+            <p>Assignment
+                <select name="assignment">
+                    <option>W1D1</option>
+                    <option>W1D2</option>
+                    <option>W1D3</option>
+                    <option>W1D4</option>
+                    <option>W1D5</option>
+                </select>
+            </p>
 
-                <p>
-                    <textarea name="hw" placeholder="Homework report"></textarea>
-                </p>
+            <p>
+                <textarea name="hw" placeholder="Homework report"></textarea>
+            </p>
 
-                <p>
-                    <input id="honest" type="checkbox" name="honest" />
-                    <label for="honest">Trust me!</label>
-                </p>
+            <p>
+                <input id="honest" type="checkbox" name="honest" />
+                <label for="honest">Trust me!</label>
+            </p>
             </fieldset>
 
             <input type="submit" value="Submit" />

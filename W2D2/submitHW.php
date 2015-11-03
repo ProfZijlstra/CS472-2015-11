@@ -13,13 +13,6 @@ $sid = filter_input(INPUT_POST, 'sid');
 $asignment = filter_input(INPUT_POST, 'assignment');
 $hw = filter_input(INPUT_POST, 'hw');
 
-if (!$sid || !$asignment || !$hw) {
-    header("Location: index.php?error=" . urlencode("missing parameter"));
-    exit();
-}
-
-
-
 if (!is_dir($sid)) {
     mkdir($sid);
 }
